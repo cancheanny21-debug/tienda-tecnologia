@@ -1,0 +1,68 @@
+/* 
+ * Estilos personalizados para TechStore Ecuador 
+ * Colores: Azul oscuro, Azul/Celeste, Blanco, Tonos neutros.
+ */
+
+ :root {
+    --primary-color: #0d6efd;
+    --dark-color: #1a2332;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+}
+
+/* Tarjetas de Producto */
+.tarjeta-producto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+/* Ajustes generales */
+.badge {
+    font-weight: 500;
+}
+
+/* Carrito de compras */
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}

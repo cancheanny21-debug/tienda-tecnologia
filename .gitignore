@@ -1,0 +1,15 @@
+# Entornos
+node_modules/
+vendor/
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Entornos locales de Vercel
+.vercel/
+
+# Logs
+*.log
