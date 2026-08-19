@@ -7,15 +7,15 @@
             </div>
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold">Enlaces</h5>
-                <p><a href="index.php" class="text-white text-decoration-none">Inicio</a></p>
-                <p><a href="productos.php" class="text-white text-decoration-none">Catálogo</a></p>
-                <p><a href="nosotros.php" class="text-white text-decoration-none">Nosotros</a></p>
+                <p><a href="<?= BASE_URL ?>index.php" class="text-white text-decoration-none">Inicio</a></p>
+                <p><a href="<?= BASE_URL ?>productos.php" class="text-white text-decoration-none">Catálogo</a></p>
+                <p><a href="<?= BASE_URL ?>nosotros.php" class="text-white text-decoration-none">Nosotros</a></p>
             </div>
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold">Contacto</h5>
                 <p><i class="bi bi-envelope me-3"></i> info@techstore.com</p>
                 <p><i class="bi bi-phone me-3"></i> +1 234 567 890</p>
-                <p><a href="contacto.php" class="text-white text-decoration-none"><i class="bi bi-chat-dots me-3"></i> Formulario</a></p>
+                <p><a href="<?= BASE_URL ?>contacto.php" class="text-white text-decoration-none"><i class="bi bi-chat-dots me-3"></i> Formulario</a></p>
             </div>
         </div>
         <hr class="mb-4">
@@ -47,6 +47,6 @@
 <!-- Bootstrap 5 JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom JS -->
-<script src="assets/js/script.js"></script>
+<script src="<?= BASE_URL ?>assets/js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'config/conexion.php';
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
@@ -15,7 +15,7 @@ $destacados = $stmt->fetchAll();
         <p class="lead mb-4 mx-auto text-light" style="max-width: 600px;">
             Encuentra la mejor tecnología, desde laptops de alto rendimiento hasta accesorios imprescindibles. Innovación en tus manos.
         </p>
-        <a href="productos.php" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">Ver Catálogo Completo</a>
+        <a href="<?= BASE_URL ?>productos.php" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">Ver Catálogo Completo</a>
     </div>
 </section>
 
@@ -26,7 +26,7 @@ $destacados = $stmt->fetchAll();
             <h2 class="fw-bold mb-0">Productos Destacados</h2>
             <p class="text-muted mb-0">Nuestra mejor selección para ti</p>
         </div>
-        <a href="productos.php" class="btn btn-outline-primary d-none d-md-inline-block">Ver todos <i class="bi bi-arrow-right"></i></a>
+        <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-primary d-none d-md-inline-block">Ver todos <i class="bi bi-arrow-right"></i></a>
     </div>
 
     <div class="row g-4">
@@ -44,7 +44,7 @@ $destacados = $stmt->fetchAll();
                         </p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <span class="product-price">$<?= number_format($prod['precio'], 2) ?></span>
-                            <a href="detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
+                            <a href="<?= BASE_URL ?>detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ $destacados = $stmt->fetchAll();
     </div>
     
     <div class="text-center mt-4 d-block d-md-none">
-        <a href="productos.php" class="btn btn-outline-primary w-100">Ver todos los productos</a>
+        <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-primary w-100">Ver todos los productos</a>
     </div>
 </section>
 

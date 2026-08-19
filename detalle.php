@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'config/conexion.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -24,9 +24,9 @@ require_once 'includes/navbar.php';
 <div class="container py-5">
     <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php" class="text-decoration-none">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="productos.php" class="text-decoration-none">Catálogo</a></li>
-            <li class="breadcrumb-item"><a href="categorias.php?cat=<?= urlencode($producto['categoria']) ?>" class="text-decoration-none"><?= htmlspecialchars($producto['categoria']) ?></a></li>
+            <li class="breadcrumb-item"><a href="<?= BASE_URL ?>index.php" class="text-decoration-none">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="<?= BASE_URL ?>productos.php" class="text-decoration-none">Catálogo</a></li>
+            <li class="breadcrumb-item"><a href="<?= BASE_URL ?>categorias.php?cat=<?= urlencode($producto['categoria']) ?>" class="text-decoration-none"><?= htmlspecialchars($producto['categoria']) ?></a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= htmlspecialchars($producto['nombre']) ?></li>
         </ol>
     </nav>
@@ -52,7 +52,7 @@ require_once 'includes/navbar.php';
             </div>
 
             <div class="d-flex gap-3 mt-4">
-                <a href="productos.php" class="btn btn-outline-secondary px-4 py-2"><i class="bi bi-arrow-left me-2"></i> Regresar al Catálogo</a>
+                <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-secondary px-4 py-2"><i class="bi bi-arrow-left me-2"></i> Regresar al Catálogo</a>
                 <button class="btn btn-primary px-5 py-2 fw-bold shadow-sm" <?= $producto['stock'] == 0 ? 'disabled' : '' ?>><i class="bi bi-cart-plus me-2"></i> Añadir al carrito</button>
             </div>
         </div>

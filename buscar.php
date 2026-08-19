@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'config/conexion.php';
 
 $query = isset($_GET['q']) ? trim($_GET['q']) : '';
@@ -43,7 +43,7 @@ require_once 'includes/navbar.php';
                             </p>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="product-price">$<?= number_format($prod['precio'], 2) ?></span>
-                                <a href="detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
+                                <a href="<?= BASE_URL ?>detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ require_once 'includes/navbar.php';
                 <i class="bi bi-search text-muted" style="font-size: 3rem;"></i>
                 <h3 class="mt-3">No encontramos nada para "<?= htmlspecialchars($query) ?>"</h3>
                 <p class="text-muted">Intenta buscar con otros términos o palabras clave.</p>
-                <a href="productos.php" class="btn btn-outline-primary mt-3">Volver al catálogo</a>
+                <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-primary mt-3">Volver al catálogo</a>
             </div>
         <?php endif; ?>
     </div>

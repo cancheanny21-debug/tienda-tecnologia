@@ -1,28 +1,40 @@
 /* assets/css/estilos.css */
 
+/* =========================================
+   VARIABLES
+   ========================================= */
 :root {
     --primary-color: #0d6efd;
+    --primary-dark: #0a192f;
     --dark-bg: #212529;
+    --secondary-color: #17a2b8;
+    --accent-color: #0dcaf0;
     --light-bg: #f8f9fa;
     --white: #ffffff;
+    --text-color: #333;
 }
 
+/* =========================================
+   BASE
+   ========================================= */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--light-bg);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Tipografía */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-/* Header & Navbar */
+/* =========================================
+   NAVBAR
+   ========================================= */
 .navbar {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -39,9 +51,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
-/* Hero Section */
+/* =========================================
+   HERO SECTION
+   ========================================= */
 .hero-section {
-    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1e21 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #112240 100%);
     color: var(--white);
     padding: 100px 0;
     position: relative;
@@ -55,6 +69,15 @@ h1, h2, h3, h4, h5, h6 {
     background: radial-gradient(circle at 80% 20%, rgba(13, 110, 253, 0.15) 0%, transparent 50%);
 }
 
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none"/></svg>') repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
@@ -62,9 +85,14 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(90deg, #fff, #a5c8ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
 }
 
-/* Tarjetas de Producto */
+/* =========================================
+   TARJETAS DE PRODUCTO
+   ========================================= */
 .product-card {
     border: none;
     border-radius: 12px;
@@ -72,12 +100,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--white);
     height: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .product-img-wrapper {
@@ -109,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.8rem;
     font-weight: 600;
     backdrop-filter: blur(4px);
+    z-index: 1;
 }
 
 .product-title {
@@ -124,13 +153,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
-/* Detalle del Producto */
+/* =========================================
+   DETALLE DEL PRODUCTO
+   ========================================= */
 .product-detail-img {
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Formularios */
+/* =========================================
+   FORMULARIOS
+   ========================================= */
 .form-control {
     border-radius: 8px;
     padding: 12px 15px;
@@ -142,7 +175,9 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #86b7fe;
 }
 
-/* Botones */
+/* =========================================
+   BOTONES
+   ========================================= */
 .btn-primary {
     padding: 10px 24px;
     font-weight: 600;
@@ -155,7 +190,38 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
-/* Footer (push to bottom) */
+.btn-outline-info {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-info:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+}
+
+/* =========================================
+   UTILIDADES
+   ========================================= */
+.bg-primary-dark {
+    background-color: var(--primary-dark) !important;
+}
+
+.min-vh-100-custom {
+    min-height: calc(100vh - 76px - 250px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
     margin-top: auto;
+}
+
+.footer-link {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-color) !important;
 }

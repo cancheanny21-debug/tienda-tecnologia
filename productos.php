@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'config/conexion.php';
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
@@ -30,7 +30,7 @@ $productos = $stmt->fetchAll();
                             </p>
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <span class="product-price">$<?= number_format($prod['precio'], 2) ?></span>
-                                <a href="detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
+                                <a href="<?= BASE_URL ?>detalle.php?id=<?= $prod['id'] ?>" class="btn btn-sm btn-primary">Ver detalles</a>
                             </div>
                         </div>
                     </div>
