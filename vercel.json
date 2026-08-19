@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-community/php@0.3.4"
+    }
+  },
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/productos", "dest": "/api/productos.php" },
+    { "src": "/producto", "dest": "/api/producto.php" },
+    { "src": "/carrito", "dest": "/api/carrito.php" },
+    { "src": "/nosotros", "dest": "/api/nosotros.php" },
+    { "src": "/contacto", "dest": "/api/contacto.php" },
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
