@@ -18,8 +18,8 @@ foreach($productos as $p) {
     <?php if($productoActual): ?>
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="/productos">Catálogo</a></li>
+                <li class="breadcrumb-item"><a href="<?= BASE_URL ?>">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="<?= BASE_URL ?>productos.php">Catálogo</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?= htmlspecialchars($productoActual['nombre']) ?></li>
             </ol>
         </nav>
@@ -64,7 +64,7 @@ foreach($productos as $p) {
                 <i class="fa-solid fa-triangle-exclamation fs-1 text-warning mb-3"></i>
                 <h2 class="fw-bold">Producto no encontrado</h2>
                 <p class="text-muted">El producto que buscas no existe o ha sido eliminado.</p>
-                <a href="/productos" class="btn btn-primary mt-3">Volver al Catálogo</a>
+                <a href="<?= BASE_URL ?>productos.php" class="btn btn-primary mt-3">Volver al Catálogo</a>
             </div>
         </div>
     <?php endif; ?>

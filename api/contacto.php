@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="/" class="btn btn-primary px-4">Volver al Inicio</a>
+                    <a href="<?= BASE_URL ?>" class="btn btn-primary px-4">Volver al Inicio</a>
                 </div>
             <?php else: ?>
                 

@@ -29,7 +29,7 @@ function renderizarCarrito() {
                 <i class="fa-solid fa-cart-arrow-down fs-1 text-muted mb-3"></i>
                 <h3 class="fw-bold">Tu carrito está vacío</h3>
                 <p class="text-muted">Parece que aún no has agregado ningún producto.</p>
-                <a href="/productos" class="btn btn-primary mt-2">Explorar Productos</a>
+                <a href="<?= BASE_URL ?>productos.php" class="btn btn-primary mt-2">Explorar Productos</a>
             </div>
         `;
         return;

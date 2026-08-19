@@ -15,7 +15,7 @@ if (!isset($producto)) return;
                 <?= htmlspecialchars($producto['descripcion']) ?>
             </p>
             <div class="mt-auto">
-                <a href="/producto?id=<?= $producto['id'] ?>" class="btn btn-outline-primary w-100 mb-2">Ver Detalles</a>
+                <a href="<?= BASE_URL ?>detalle.php?id=<?= $producto['id'] ?>" class="btn btn-outline-primary w-100 mb-2">Ver Detalles</a>
                 <button class="btn btn-primary w-100 add-to-cart" 
                         data-id="<?= $producto['id'] ?>" 
                         data-nombre="<?= htmlspecialchars($producto['nombre']) ?>" 

@@ -14,7 +14,7 @@ $productos_destacados = array_slice($productos, 0, 4);
         <p class="lead mb-5 mx-auto" style="max-width: 700px;">
             Encuentra la mejor tecnología con precios increíbles. Desde laptops potentes hasta los smartphones más avanzados, todo a un clic de distancia.
         </p>
-        <a href="/productos" class="btn btn-info btn-lg text-dark fw-bold px-5 rounded-pill shadow-lg">Ver Productos</a>
+        <a href="<?= BASE_URL ?>productos.php" class="btn btn-info btn-lg text-dark fw-bold px-5 rounded-pill shadow-lg">Ver Productos</a>
     </div>
 </section>
 
@@ -57,7 +57,7 @@ $productos_destacados = array_slice($productos, 0, 4);
             <?php endforeach; ?>
         </div>
         <div class="text-center mt-4">
-            <a href="/productos" class="btn btn-outline-primary px-4">Ver Catálogo Completo</a>
+            <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-primary px-4">Ver Catálogo Completo</a>
         </div>
     </div>
 </section>

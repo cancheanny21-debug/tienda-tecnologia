@@ -11,10 +11,10 @@
             <div class="col-md-4">
                 <h5 class="fw-bold mb-3">Enlaces Rápidos</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/" class="text-white-50 text-decoration-none footer-link">Inicio</a></li>
-                    <li><a href="/productos" class="text-white-50 text-decoration-none footer-link">Catálogo</a></li>
-                    <li><a href="/nosotros" class="text-white-50 text-decoration-none footer-link">Nosotros</a></li>
-                    <li><a href="/contacto" class="text-white-50 text-decoration-none footer-link">Contacto</a></li>
+                    <li><a href="<?= BASE_URL ?>" class="text-white-50 text-decoration-none footer-link">Inicio</a></li>
+                    <li><a href="<?= BASE_URL ?>productos.php" class="text-white-50 text-decoration-none footer-link">Catálogo</a></li>
+                    <li><a href="<?= BASE_URL ?>nosotros.php" class="text-white-50 text-decoration-none footer-link">Nosotros</a></li>
+                    <li><a href="<?= BASE_URL ?>contacto.php" class="text-white-50 text-decoration-none footer-link">Contacto</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -36,6 +36,6 @@
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Lógica del Carrito y App -->
-<script src="/assets/js/app.js"></script>
+<script src="<?= BASE_URL ?>assets/js/app.js"></script>
 </body>
 </html>

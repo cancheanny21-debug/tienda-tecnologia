@@ -35,7 +35,7 @@ if (!empty($orden)) {
             <h2 class="fw-bold m-0">Catálogo de Productos</h2>
         </div>
         <div class="col-md-8">
-            <form action="/productos" method="GET" class="d-flex flex-column flex-md-row gap-2">
+            <form action="<?= BASE_URL ?>productos.php" method="GET" class="d-flex flex-column flex-md-row gap-2">
                 <!-- Buscador -->
                 <input type="text" name="q" class="form-control" placeholder="Buscar por nombre..." value="<?= $busqueda ?>">
                 
@@ -56,7 +56,7 @@ if (!empty($orden)) {
                 
                 <button type="submit" class="btn btn-primary">Filtrar</button>
                 <?php if(!empty($busqueda) || !empty($categoriaFiltro) || !empty($orden)): ?>
-                    <a href="/productos" class="btn btn-outline-secondary">Limpiar</a>
+                    <a href="<?= BASE_URL ?>productos.php" class="btn btn-outline-secondary">Limpiar</a>
                 <?php endif; ?>
             </form>
         </div>
@@ -73,7 +73,7 @@ if (!empty($orden)) {
                     <i class="fa-solid fa-magnifying-glass fs-1 text-muted mb-3"></i>
                     <h3 class="fw-bold">No se encontraron resultados</h3>
                     <p class="text-muted">Intenta con otros términos de búsqueda o filtros.</p>
-                    <a href="/productos" class="btn btn-primary mt-2">Ver todos los productos</a>
+                    <a href="<?= BASE_URL ?>productos.php" class="btn btn-primary mt-2">Ver todos los productos</a>
                 </div>
             </div>
         <?php endif; ?>
