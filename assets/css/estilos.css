@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+/* Paleta de Colores (Azul Oscuro, Blanco, Celeste) */
+:root {
+    --primary-color: #0d6efd;
+    --primary-dark: #0a192f;
+    --secondary-color: #17a2b8;
+    --accent-color: #0dcaf0;
+    --text-color: #333;
+=======
 /* assets/css/estilos.css */
 
 :root {
     --primary-color: #0d6efd;
     --dark-bg: #212529;
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
     --light-bg: #f8f9fa;
     --white: #ffffff;
 }
@@ -10,11 +20,40 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--light-bg);
+<<<<<<< HEAD
+    color: var(--text-color);
+=======
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+<<<<<<< HEAD
+.bg-primary-dark {
+    background-color: var(--primary-dark) !important;
+}
+
+.text-info {
+    color: var(--accent-color) !important;
+}
+
+.btn-outline-info {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.btn-outline-info:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #0b5ed7;
+=======
 /* Tipografía */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -37,16 +76,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: var(--primary-color) !important;
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
 }
 
 /* Hero Section */
 .hero-section {
+<<<<<<< HEAD
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #112240 100%);
+=======
     background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1e21 100%);
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
     color: var(--white);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
 }
+<<<<<<< HEAD
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none"/></svg>') repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+=======
 
 .hero-section::before {
     content: '';
@@ -62,10 +119,33 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(90deg, #fff, #a5c8ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
 }
 
 /* Tarjetas de Producto */
 .product-card {
+<<<<<<< HEAD
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Footer Links */
+.footer-link {
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Utilidades */
+.min-vh-100-custom {
+    min-height: calc(100vh - 76px - 250px); /* Restando approx header y footer */
+=======
     border: none;
     border-radius: 12px;
     overflow: hidden;
@@ -158,4 +238,5 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer (push to bottom) */
 footer {
     margin-top: auto;
+>>>>>>> 1b546b628c0f4712c2e8a9a3fbfbb487770e5eb7
 }
